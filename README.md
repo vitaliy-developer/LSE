@@ -1,2 +1,2 @@
 # LSE
-![alt text](https://github.com/vitaliy-developer/scrr/blob/main/img/img101.png)
+![alt text](https://github.com/vitaliy-developer/LSE/blob/main/img/img101.png)
