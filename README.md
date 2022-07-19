@@ -14,7 +14,9 @@ We check our service on the minikube:
 * $ kubectl get  sealedsecret.bitnami.com/database-credentials // Get our secrets
 * $ kubectl logs -n kube-system sealed-secrets-controller-846f459596-xcmfn // Check log
 
-### Encrypted -> decrypted -> encrypted (local sealed-secrets)
+### Changing existing secrets locally (sealed-secrets)
+Working directory: 
+> ./sealed-secrets
 
 * $ kubeseal --fetch-cert > sealed-secrets.pem // store the certificate offline and create sealed secrets without having access to the controller
 * $ kubectl get secret -n kube-system -l sealedsecrets.bitnami.com/sealed-secrets-key -o yaml > backup-sealedSecret.key // we can backup the secret attached to the controller which contains the certificate and key. The key is used for the operation of decrypting sealed secrets into secrets.
@@ -24,3 +26,6 @@ We check our service on the minikube:
 * $ kubectl apply -f sealed-secret-test.yaml
 
 ![alt text](https://github.com/vitaliy-developer/LSE/blob/main/img/img101.png)
+
+I hope my guide helped you :blush:
+
